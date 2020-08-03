@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'sanitize.css';
+import 'sanitize.css/forms.css';
+import 'sanitize.css/typography.css';
+import { ThemeProvider, theme, GlobalStyle } from './theme';
 
 function App() {
   return (
-    <div>
-      <h1>App</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
 
