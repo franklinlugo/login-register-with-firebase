@@ -1,6 +1,7 @@
 import React from 'react';
 import { Input, Button } from '../index';
 import { Container, Title, SocialLogin, FacebookButton, GoogleButton } from './LoginFormStyles';
+import { Facebook, Google } from '../../assets/Icons';
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -17,8 +18,14 @@ function LoginForm() {
       </form>
       <SocialLogin>
         <span>Or login with</span>
-        <FacebookButton>Facebook</FacebookButton>
-        <GoogleButton>Google</GoogleButton>
+        <FacebookButton>
+          <Facebook />
+          Facebook
+        </FacebookButton>
+        <GoogleButton>
+          <Google />
+          Google
+        </GoogleButton>
       </SocialLogin>
     </Container>
   );

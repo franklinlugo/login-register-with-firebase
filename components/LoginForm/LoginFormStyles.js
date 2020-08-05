@@ -30,9 +30,14 @@ export const SocialLogin = styled.section`
 
 const SocialButton = css`
   display: grid;
-  place-self: center;
-  gap: 8px;
+  grid-template-columns: repeat(2, min-content);
+  justify-content: center;
+  align-content: center;
+  gap: 16px;
   width: 100%;
+  height: 40px;
+  white-space: nowrap;
+  cursor: pointer;
 `;
 
 export const FacebookButton = styled.button`
