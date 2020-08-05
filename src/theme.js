@@ -1,6 +1,8 @@
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
-const theme = {};
+const theme = {
+  colorPrimary: '#d43f8d',
+};
 
 const GlobalStyle = createGlobalStyle`
   body {

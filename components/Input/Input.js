@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { string, oneOf } from 'prop-types';
-import { Envelope, Lock } from './icons';
+import { Envelope, Lock } from '../../assets/Icons';
 
 const Wrapper = styled.div`
   position: relative;
@@ -31,8 +31,8 @@ const IconWrapper = styled.div`
   transform: translate(0, -50%);
   width: 22px;
   transition: 0.3s;
-  svg{
-    path{
+  svg {
+    path {
       fill: ${({ isFocused }) => (isFocused ? '#d43f8d' : '#7f7f7f')};
     }
   }
@@ -65,10 +65,10 @@ const Focus = styled.div`
 
 const IconEnum = {
   envelope: Envelope,
-  lock: Lock
-}
+  lock: Lock,
+};
 
-function Input({ type = 'text', icon = '' }) {
+function Input({ type = 'text', icon }) {
   const [isFocused, setIsfocused] = useState(false);
 
   function handleOnFocus() {
@@ -83,7 +83,7 @@ function Input({ type = 'text', icon = '' }) {
     <Wrapper>
       <StyledInput onFocus={handleOnFocus} onBlur={handleOnBlur} type={type} />
       <IconWrapper isFocused={isFocused}>
-        <Icon width='18px'/>
+        <Icon width="18px" />
       </IconWrapper>
       <Focus isFocused={isFocused} />
     </Wrapper>
