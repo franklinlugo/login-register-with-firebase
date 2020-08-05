@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled, { keyframes, css } from 'styled-components';
-import { string } from 'prop-types';
+import { string, oneOf } from 'prop-types';
+import { Envelope, Lock } from './icons';
 
 const Wrapper = styled.div`
   position: relative;
@@ -23,13 +24,18 @@ const StyledInput = styled.input`
   z-index: 1000;
 `;
 
-const InputIcon = styled.img`
+const IconWrapper = styled.div`
   position: absolute;
   top: 50%;
   left: ${({ isFocused }) => (isFocused ? '8px' : '16px')};
   transform: translate(0, -50%);
   width: 22px;
   transition: 0.3s;
+  svg{
+    path{
+      fill: ${({ isFocused }) => (isFocused ? '#d43f8d' : '#7f7f7f')};
+    }
+  }
 `;
 
 const shadowAnimation = keyframes`
@@ -57,6 +63,11 @@ const Focus = styled.div`
   ${({ isFocused }) => isFocused && shadowAnimationMixin}
 `;
 
+const IconEnum = {
+  envelope: Envelope,
+  lock: Lock
+}
+
 function Input({ type = 'text', icon = '' }) {
   const [isFocused, setIsfocused] = useState(false);
 
@@ -66,10 +77,14 @@ function Input({ type = 'text', icon = '' }) {
   function handleOnBlur() {
     setIsfocused(false);
   }
+
+  const Icon = IconEnum[icon];
   return (
     <Wrapper>
       <StyledInput onFocus={handleOnFocus} onBlur={handleOnBlur} type={type} />
-      <InputIcon isFocused={isFocused} src={icon} />
+      <IconWrapper isFocused={isFocused}>
+        <Icon width='18px'/>
+      </IconWrapper>
       <Focus isFocused={isFocused} />
     </Wrapper>
   );
@@ -77,7 +92,7 @@ function Input({ type = 'text', icon = '' }) {
 
 Input.propTypes = {
   type: string,
-  icon: string,
+  icon: oneOf(['envelope', 'lock']),
 };
 
 export default Input;

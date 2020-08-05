@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import iconEnvelope from '../../images/icon-envelope.svg';
-import iconLock from '../../images/icon-lock.svg';
 import { Input } from '../index';
 
 const Container = styled.div`
@@ -21,8 +19,8 @@ function LoginForm() {
   return (
     <Container>
       <Title>LOGIN</Title>
-      <Input type="text" icon={iconEnvelope} />
-      <Input type="password" icon={iconLock} />
+      <Input type="text" icon="envelope" />
+      <Input type="password" icon="lock" />
     </Container>
   );
 }
