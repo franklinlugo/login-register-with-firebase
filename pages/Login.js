@@ -1,8 +1,12 @@
 import React from 'react';
-import { FormBackground } from '../components';
+import { FormBackground, LoginForm } from '../components';
 
 function Login() {
-  return <FormBackground>LOGIN</FormBackground>;
+  return (
+    <FormBackground>
+      <LoginForm />
+    </FormBackground>
+  );
 }
 
 export default Login;

@@ -3,11 +3,14 @@ import styled from 'styled-components';
 import { node, arrayOf, oneOfType } from 'prop-types';
 
 const Container = styled.div`
+  display: grid;
+  place-items: center;
   position: relative;
   background: linear-gradient(180deg, #0250c5, #d43f8d);
   width: 100vw;
   height: 100vh;
-  &::before {
+  z-index: 1000;
+  &::after {
     content: '';
     position: absolute;
     top: 0;
@@ -19,6 +22,7 @@ const Container = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    z-index: -1000;
   }
 `;
 
