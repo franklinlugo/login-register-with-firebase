@@ -4,15 +4,12 @@ import 'sanitize.css';
 import 'sanitize.css/forms.css';
 import 'sanitize.css/typography.css';
 import { ThemeProvider, theme, GlobalStyle } from './theme';
-import { Login } from '../pages';
+import App from './App';
 
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Login />
-    </ThemeProvider>
-  );
-}
-
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <App />
+  </ThemeProvider>,
+  document.getElementById('app'),
+);

@@ -32,6 +32,7 @@ export function Facebook(props) {
     </svg>
   );
 }
+
 export function Google(props) {
   return (
     <svg height={24} width={24} {...props}>
