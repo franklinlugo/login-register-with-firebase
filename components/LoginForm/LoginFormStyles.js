@@ -59,4 +59,7 @@ export const RegisterLink = styled.p`
   line-height: 1;
   color: ${(props) => props.theme.gray};
   text-align: center;
+  a {
+    color: ${(props) => props.theme.gray};
+  }
 `;

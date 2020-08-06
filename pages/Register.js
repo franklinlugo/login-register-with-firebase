@@ -1,7 +1,8 @@
 import React from 'react';
+import { FormBackground } from '../components';
 
 function Register() {
-  return null;
+  return <FormBackground>Register</FormBackground>;
 }
 
 export default Register;
