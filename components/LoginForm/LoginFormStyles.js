@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 450px;
   padding: 70px 50px 30px;
-  background: #fff;
+  background: ${(props) => props.theme.white};
 `;
 
 export const Title = styled.h3`
@@ -20,15 +20,16 @@ export const SocialLogin = styled.section`
     'text text'
     'facebookButton googleButton';
   gap: 16px;
+  margin: 32px 0 64px 0;
   span {
     grid-area: text;
     font-size: 16px;
-    color: #999;
+    color: ${(props) => props.theme.gray};
     text-align: center;
   }
 `;
 
-const SocialButton = css`
+const SocialButton = styled.button`
   display: grid;
   grid-template-columns: repeat(2, min-content);
   justify-content: center;
@@ -38,13 +39,24 @@ const SocialButton = css`
   height: 40px;
   white-space: nowrap;
   cursor: pointer;
+  transition: 0.3s;
+  transform-style: preserve-3d;
+  &:active {
+    transform: scale(0.97);
+  }
 `;
 
-export const FacebookButton = styled.button`
+export const FacebookButton = styled(SocialButton)`
   grid-area: facebookButton;
-  ${SocialButton}
 `;
-export const GoogleButton = styled.button`
+export const GoogleButton = styled(SocialButton)`
   grid-area: googleButton;
-  ${SocialButton}
+`;
+
+export const RegisterLink = styled.p`
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: ${(props) => props.theme.gray};
+  text-align: center;
 `;

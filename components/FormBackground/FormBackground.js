@@ -6,7 +6,7 @@ const Container = styled.div`
   display: grid;
   place-items: center;
   position: relative;
-  background: linear-gradient(180deg, #0250c5, #d43f8d);
+  background: ${(props) => `linear-gradient(180deg, ${props.theme.secondary}, ${props.theme.primary})`};
   width: 100vw;
   height: 100vh;
   z-index: 1000;

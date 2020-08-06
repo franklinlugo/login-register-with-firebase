@@ -7,8 +7,8 @@ const StyledButton = styled.button`
   place-items: center;
   width: 100%;
   height: 60px;
-  background-color: ${(props) => props.theme.colorPrimary};
-  color: #fff;
+  background-color: ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.white};
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
