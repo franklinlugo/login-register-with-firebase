@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styled, { keyframes, css } from 'styled-components';
 import { string, oneOf, func } from 'prop-types';
-import { Envelope, Lock } from '../../assets/Icons';
-import {Wrapper, StyledLabel, StyledInput, IconWrapper, Icon, Focus} from './InputStyles'
+import { Envelope, Lock, Error as ErrorIcon } from '../../assets/Icons';
+import { Container, InputContainer, StyledLabel, StyledInput, IconWrapper, Focus, Error } from './InputStyles';
 
 const IconEnum = Object.freeze({
   envelope: Envelope,
@@ -23,22 +22,28 @@ function Input({ name, id, type = 'text', label, value = '', onChange, icon }) {
 
   const Icon = IconEnum[icon];
   return (
-    <Wrapper isFocused={isFocused} isEmpty={isEmpty}>
-      <StyledLabel>{label}</StyledLabel>
-      <StyledInput
-        name={name}
-        id={id}
-        type={type}
-        value={value}
-        onChange={onChange}
-        onFocus={handleOnFocus}
-        onBlur={handleOnBlur}
-      />
-      <IconWrapper>
-        <Icon width="18px" />
-      </IconWrapper>
-      <Focus />
-    </Wrapper>
+    <Container>
+      <InputContainer isFocused={isFocused} isEmpty={isEmpty}>
+        <StyledLabel>{label}</StyledLabel>
+        <StyledInput
+          name={name}
+          id={id}
+          type={type}
+          value={value}
+          onChange={onChange}
+          onFocus={handleOnFocus}
+          onBlur={handleOnBlur}
+        />
+        <IconWrapper>
+          <Icon width="18px" />
+        </IconWrapper>
+        <Focus />
+      </InputContainer>
+      <Error>
+        <ErrorIcon width="12px" />
+        Error
+      </Error>
+    </Container>
   );
 }
 

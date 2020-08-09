@@ -85,11 +85,11 @@ const wrapperWithValueMixin = css`
   }
 `;
 
-export const Wrapper = styled.div`
+export const InputContainer = styled.div`
   position: relative;
   width: 100%;
   height: 60px;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   border-radius: 3px;
   background-color: #f7f7f7;
   border: 1px solid;
@@ -97,4 +97,19 @@ export const Wrapper = styled.div`
   transition: 0.3s;
   ${({ isFocused }) => isFocused && wrapperFocusedMixin}
   ${({ isEmpty }) => !isEmpty && wrapperWithValueMixin}
+`;
+
+export const Error = styled.p`
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 0 0;
+  padding: 0;
+  line-height: 1;
+  color: #c80000;
+`;
+
+export const Container = styled.div`
+  margin-bottom: 24px;
 `;
