@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { string, oneOf, func } from 'prop-types';
+import { string, oneOf, func, bool } from 'prop-types';
 import { Envelope, Lock, Error as ErrorIcon } from '../../assets/Icons';
 import { Container, InputContainer, StyledLabel, StyledInput, IconWrapper, Focus, Error } from './InputStyles';
 
@@ -8,7 +8,7 @@ const IconEnum = Object.freeze({
   lock: Lock,
 });
 
-function Input({ name, id, type = 'text', label, value = '', onChange, icon }) {
+function Input({ name, id, type = 'text', label, value = '', onChange, icon, showError, errorMessage }) {
   const [isFocused, setIsfocused] = useState(false);
   const [isEmpty, setIsEmpty] = useState(true);
 
@@ -24,7 +24,7 @@ function Input({ name, id, type = 'text', label, value = '', onChange, icon }) {
   return (
     <Container>
       <InputContainer isFocused={isFocused} isEmpty={isEmpty}>
-        <StyledLabel>{label}</StyledLabel>
+        <StyledLabel htmlFor={id}>{label}</StyledLabel>
         <StyledInput
           name={name}
           id={id}
@@ -39,10 +39,12 @@ function Input({ name, id, type = 'text', label, value = '', onChange, icon }) {
         </IconWrapper>
         <Focus />
       </InputContainer>
-      <Error>
-        <ErrorIcon width="12px" />
-        Error
-      </Error>
+      {showError && (
+        <Error>
+          <ErrorIcon width="12px" />
+          {errorMessage}
+        </Error>
+      )}
     </Container>
   );
 }
@@ -55,6 +57,8 @@ Input.propTypes = {
   value: string,
   onChange: func,
   icon: oneOf(['envelope', 'lock']),
+  showError: bool,
+  errorMessage: string,
 };
 
 export default Input;

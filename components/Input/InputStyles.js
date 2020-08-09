@@ -11,6 +11,7 @@ export const StyledInput = styled.input`
   border-radius: 3px;
   border: none;
   z-index: 1000;
+  outline: none;
 `;
 
 export const StyledLabel = styled.label`
