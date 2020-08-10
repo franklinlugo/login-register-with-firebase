@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { Input, Button } from '../index';
 import { Container, Title, SocialLogin, FacebookButton, GoogleButton, RegisterLink } from './LoginFormStyles';
 import { Facebook, Google } from '../../assets/Icons';
+import { app, googleAuthProvider, facebookAuthProvider } from '../../src/firebase';
 
 function LoginForm() {
   const { values, errors, touched, handleChange, handleSubmit, isValid, dirty } = useFormik({
@@ -20,6 +21,16 @@ function LoginForm() {
       alert(JSON.stringify(vals, null, 2));
     },
   });
+
+  async function handleGoogleLogin() {
+    const result = await app.auth().signInWithPopup(googleAuthProvider);
+    console.log('result=>', result);
+  }
+
+  async function handleFacebookLogin() {
+    const result = await app.auth().signInWithPopup(facebookAuthProvider);
+    console.log('result=>', result);
+  }
 
   return (
     <Container>
@@ -55,11 +66,11 @@ function LoginForm() {
 
       <SocialLogin>
         <span>Or login with</span>
-        <FacebookButton>
+        <FacebookButton onClick={handleFacebookLogin}>
           <Facebook />
           Facebook
         </FacebookButton>
-        <GoogleButton>
+        <GoogleButton onClick={handleGoogleLogin}>
           <Google />
           Google
         </GoogleButton>
