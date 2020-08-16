@@ -59,9 +59,7 @@ function LoginForm() {
           showError={errors.password && touched.password}
           errorMessage={errors.password}
         />
-        <Button type="submit" disabled={!isValid || !dirty}>
-          LOGIN
-        </Button>
+        <Button type="submit">LOGIN</Button>
       </form>
 
       <SocialLogin>
