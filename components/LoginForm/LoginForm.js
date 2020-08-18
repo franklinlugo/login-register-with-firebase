@@ -17,19 +17,17 @@ function LoginForm() {
       email: Yup.string().email('Invalid email address').required('Required'),
       password: Yup.string().min(8, 'Must be at least 8 characters').required('Required'),
     }),
-    onSubmit: (vals) => {
-      alert(JSON.stringify(vals, null, 2));
+    onSubmit: async (vals) => {
+      await app.auth().signInWithEmailAndPassword(vals.email, vals.password);
     },
   });
 
   async function handleGoogleLogin() {
-    const result = await app.auth().signInWithPopup(googleAuthProvider);
-    console.log('result=>', result);
+    await app.auth().signInWithPopup(googleAuthProvider);
   }
 
   async function handleFacebookLogin() {
-    const result = await app.auth().signInWithPopup(facebookAuthProvider);
-    console.log('result=>', result);
+    await app.auth().signInWithPopup(facebookAuthProvider);
   }
 
   return (
