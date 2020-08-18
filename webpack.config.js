@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 
 const javascriptRules = {
   test: /\.jsx?$/,
@@ -47,12 +47,20 @@ module.exports = (env, argv) => {
     },
     module: { rules },
     devtool: 'cheap-module-source-map',
+    resolve: {
+      alias: {
+        pages: path.resolve(__dirname, 'src/pages/'),
+        common: path.resolve(__dirname, 'src/common/'),
+        assets: path.resolve(__dirname, 'src/assets/'),
+        components: path.resolve(__dirname, 'src/components/')
+      }
+    },
     plugins: [
       new HtmlWebPackPlugin({
         template: './src/index.html',
         filename: './index.html',
       }),
-      new ErrorOverlayPlugin()
+      new ErrorOverlayPlugin(),
     ],
   };
 };

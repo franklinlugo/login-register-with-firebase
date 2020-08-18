@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Input, Button } from '../index';
+import { Facebook, Google } from 'assets/Icons';
+import { Input, Button } from 'common';
 import { Container, Title, SocialLogin, FacebookButton, GoogleButton, RegisterLink } from './LoginFormStyles';
-import { Facebook, Google } from '../../assets/Icons';
-import { app, googleAuthProvider, facebookAuthProvider } from '../../src/firebase';
+import { app, googleAuthProvider, facebookAuthProvider } from '../../firebase';
 
 function LoginForm() {
-  const { values, errors, touched, handleChange, handleSubmit, isValid, dirty } = useFormik({
+  const { values, errors, touched, handleChange, handleSubmit } = useFormik({
     initialValues: {
       email: '',
       password: '',
