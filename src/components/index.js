@@ -1,2 +1,2 @@
-export { default as FormBackground } from './FormBackground';
+export { default as FormLayout } from './FormLayout';
 export { default as LoginForm } from './LoginForm';

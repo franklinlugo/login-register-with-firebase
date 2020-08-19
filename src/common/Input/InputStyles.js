@@ -41,6 +41,17 @@ export const IconWrapper = styled.div`
   }
 `;
 
+export const EyeVisibility = styled.span`
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  padding: 4px 6px;
+  transform: translate(0, -50%);
+  transition: 0.3s;
+  border: none;
+  z-index: 10000;
+`;
+
 const shadowAnimation = keyframes`
   to {
     box-shadow: 0px 0px 60px 20px;
@@ -90,7 +101,6 @@ export const InputContainer = styled.div`
   position: relative;
   width: 100%;
   height: 60px;
-  /* margin-bottom: 24px; */
   border-radius: 3px;
   background-color: #f7f7f7;
   border: 1px solid;

@@ -26,12 +26,12 @@ const Container = styled.div`
   }
 `;
 
-function FormBackground({ children }) {
+function FormLayout({ children }) {
   return <Container>{children}</Container>;
 }
 
-FormBackground.propTypes = {
+FormLayout.propTypes = {
   children: oneOfType([node, arrayOf(node)]),
 };
 
-export default FormBackground;
+export default FormLayout;

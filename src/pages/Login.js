@@ -1,11 +1,11 @@
 import React from 'react';
-import { FormBackground, LoginForm } from 'components';
+import { FormLayout, LoginForm } from 'components';
 
 function Login() {
   return (
-    <FormBackground>
+    <FormLayout>
       <LoginForm />
-    </FormBackground>
+    </FormLayout>
   );
 }
 
