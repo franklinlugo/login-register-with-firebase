@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-Axmtr hPYRYX"
+  >
+    <div
+      class="sc-AxgMl jLLscj"
+    >
+      <label
+        class="sc-AxirZ dvsQlS"
+        for="input"
+      >
+        label
+      </label>
+      <input
+        class="sc-AxjAm kBvMjT"
+        id="input"
+        name="input"
+        type="text"
+        value="value"
+      />
+      <div
+        class="sc-AxhUy bMCNhl"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

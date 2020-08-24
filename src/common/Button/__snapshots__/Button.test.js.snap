@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button handle type 1`] = `
+<DocumentFragment>
+  <button
+    class="sc-AxjAm HosKC"
+    type="submit"
+  >
+    button
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button render correctly 1`] = `
+<DocumentFragment>
+  <button
+    class="sc-AxjAm HosKC"
+    type="button"
+  >
+    button
+  </button>
+</DocumentFragment>
+`;

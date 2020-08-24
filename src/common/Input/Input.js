@@ -17,7 +17,7 @@ const IconEnum = Object.freeze({
   lock: Lock,
 });
 
-function Input({ name, id, type = 'text', label, value = '', onChange, icon, showError, errorMessage }) {
+function Input({ name, id, type = 'text', label, value = '', onChange = () => {}, icon, showError, errorMessage }) {
   const [isFocused, setIsfocused] = useState(false);
   const [isEmpty, setIsEmpty] = useState(true);
   const isPassword = useInputIsPasswordType(type);
@@ -51,9 +51,11 @@ function Input({ name, id, type = 'text', label, value = '', onChange, icon, sho
           onFocus={handleOnFocus}
           onBlur={handleOnBlur}
         />
-        <IconWrapper>
-          <Icon width="18px" />
-        </IconWrapper>
+        {Icon && (
+          <IconWrapper>
+            <Icon width="18px" />
+          </IconWrapper>
+        )}
         {isPassword && (
           <EyeVisibility onClick={handlePasswordVisibility} role="button">
             {isPasswordVisible ? <EyeOpen /> : <EyeClosed />}
