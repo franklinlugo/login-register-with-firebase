@@ -1,8 +1,8 @@
 import React from 'react';
-import { FormBackground } from 'components';
+import { FormLayout } from 'components';
 
 function Register() {
-  return <FormBackground>Register</FormBackground>;
+  return <FormLayout>Register</FormLayout>;
 }
 
 export default Register;
