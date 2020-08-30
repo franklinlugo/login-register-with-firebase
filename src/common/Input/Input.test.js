@@ -15,7 +15,7 @@ test('Input render correctly', () => {
 });
 
 test('Input handle password', () => {
-  render(<Input type="password" id="input" label="label" i value="value" />);
+  render(<Input type="password" id="input" label="label" value="value" />);
 
   expect(screen.getByLabelText('label')).toHaveAttribute('type', 'password');
 

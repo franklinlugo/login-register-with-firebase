@@ -1,2 +1,3 @@
-export { default as FormLayout } from './FormLayout';
-export { default as LoginForm } from './LoginForm';
+export { default as FormLayout } from './FormLayout/FormLayout';
+export { default as LoginForm } from './LoginForm/LoginForm';
+export { default as RegisterForm } from './RegisterForm/RegisterForm';
