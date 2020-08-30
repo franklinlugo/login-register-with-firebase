@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { string, oneOf, func, bool } from 'prop-types';
-import { Envelope, Lock, Error as ErrorIcon, EyeOpen, EyeClosed } from '../../assets/Icons';
+import { Envelope, Lock, Error as ErrorIcon, EyeOpen, EyeClosed } from 'assets/Icons';
 import {
   Container,
   InputContainer,

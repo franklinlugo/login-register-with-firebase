@@ -6,10 +6,10 @@ exports[`Login render 1`] = `
     class="sc-AxjAm lnfnfY"
   >
     <div
-      class="sc-AxirZ kJsbdV"
+      class="sc-fzoLsD iXIjnx"
     >
       <h3
-        class="sc-AxiKw dudIHH"
+        class="sc-fzpans kzxFn"
       >
         LOGIN
       </h3>
@@ -17,26 +17,26 @@ exports[`Login render 1`] = `
         novalidate=""
       >
         <div
-          class="sc-fznKkj iCkMDF"
+          class="sc-AxmLO cwHqHy"
         >
           <div
-            class="sc-fzplWN gsYMzX"
+            class="sc-AxheI fsezoq"
           >
             <label
-              class="sc-fzozJi SHIQY"
+              class="sc-AxiKw jrbXxa"
               for="email"
             >
               Email
             </label>
             <input
-              class="sc-AxmLO coZOWP"
+              class="sc-AxirZ gthKbY"
               id="email"
               name="email"
               type="email"
               value=""
             />
             <div
-              class="sc-fzoLsD bezWOY"
+              class="sc-AxhCb jGNELg"
             >
               <svg
                 viewBox="0 0 512 512"
@@ -48,31 +48,31 @@ exports[`Login render 1`] = `
               </svg>
             </div>
             <div
-              class="sc-fzpans dfcFXM"
+              class="sc-AxgMl hGREOL"
             />
           </div>
         </div>
         <div
-          class="sc-fznKkj iCkMDF"
+          class="sc-AxmLO cwHqHy"
         >
           <div
-            class="sc-fzplWN gsYMzX"
+            class="sc-AxheI fsezoq"
           >
             <label
-              class="sc-fzozJi SHIQY"
+              class="sc-AxiKw jrbXxa"
               for="email"
             >
               Password
             </label>
             <input
-              class="sc-AxmLO coZOWP"
+              class="sc-AxirZ gthKbY"
               id="email"
               name="password"
               type="password"
               value=""
             />
             <div
-              class="sc-fzoLsD bezWOY"
+              class="sc-AxhCb jGNELg"
             >
               <svg
                 viewBox="0 0 512 512"
@@ -86,26 +86,46 @@ exports[`Login render 1`] = `
                 />
               </svg>
             </div>
+            <span
+              class="sc-AxhUy bqvrtG"
+              role="button"
+            >
+              <svg
+                height="17.999"
+                viewBox="0 0 24 17.999"
+                width="24"
+              >
+                <path
+                  d="M14.828 6.171a.5.5 0 00-.707.707A2.98 2.98 0 0115 9c0 1.654-1.346 3-3 3a2.976 2.976 0 01-2.121-.879.5.5 0 00-.707.707A3.968 3.968 0 0012 13c2.206 0 4-1.794 4-4a3.968 3.968 0 00-1.172-2.828zm-2.131-1.103A4.008 4.008 0 0012 5C9.794 5 8 6.793 8 9c0 .238.03.47.07.697a.5.5 0 00.984-.174A2.9 2.9 0 019 9c0-1.654 1.346-3 3-3 .18 0 .353.023.523.053a.499.499 0 10.174-.984z"
+                />
+                <path
+                  d="M23.881 8.676c-.113-.134-2.818-3.29-6.549-5.224a.5.5 0 00-.459.89c2.874 1.487 5.17 3.81 5.955 4.657-1.192 1.291-5.883 6-10.828 6-1.678 0-3.369-.405-5.028-1.205a.499.499 0 10-.434.9C8.333 15.561 10.171 16 12 16c6.161 0 11.651-6.404 11.882-6.677a.5.5 0 00-.001-.646zm-8.6-6.101C14.143 2.192 13.039 2 12 2 5.839 2 .35 8.403.118 8.676a.5.5 0 00-.028.61c.07.098 1.722 2.445 4.587 4.348a.495.495 0 00.692-.141.499.499 0 00-.14-.692 18.286 18.286 0 01-4.083-3.775C2.297 7.776 7.02 3 12 3c.931 0 1.928.176 2.962.523a.493.493 0 00.633-.314.5.5 0 00-.314-.633z"
+                />
+                <path
+                  d="M20.853.146a.5.5 0 00-.707 0l-17 17a.5.5 0 00.707.707l17-17a.5.5 0 000-.707z"
+                />
+              </svg>
+            </span>
             <div
-              class="sc-fzpans dfcFXM"
+              class="sc-AxgMl hGREOL"
             />
           </div>
         </div>
         <button
-          class="sc-fznZeY fdZfVl"
+          class="sc-fzozJi kTvlDf"
           type="submit"
         >
           LOGIN
         </button>
       </form>
       <section
-        class="sc-AxhCb fHmCTs"
+        class="sc-fzplWN dzgkdJ"
       >
         <span>
           Or login with
         </span>
         <button
-          class="sc-AxhUy sc-AxgMl kPbIhR"
+          class="sc-fznyAO sc-fznKkj TUaQO"
         >
           <svg
             height="24"
@@ -124,7 +144,7 @@ exports[`Login render 1`] = `
           Facebook
         </button>
         <button
-          class="sc-AxhUy sc-AxheI dpTjjW"
+          class="sc-fznyAO sc-fznZeY hyistb"
         >
           <svg
             height="24"
@@ -159,7 +179,7 @@ exports[`Login render 1`] = `
         </button>
       </section>
       <p
-        class="sc-Axmtr kXOSfd"
+        class="sc-fzokOt IYeeM"
       >
         Not a member? 
         <a
